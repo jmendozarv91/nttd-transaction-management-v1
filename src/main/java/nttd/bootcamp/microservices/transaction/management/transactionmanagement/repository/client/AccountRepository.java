@@ -1,4 +1,4 @@
-package nttd.bootcamp.microservices.transaction.management.transactionmanagement.service;
+package nttd.bootcamp.microservices.transaction.management.transactionmanagement.repository.client;
 
 import nttd.bootcamp.microservices.transaction.management.transactionmanagement.dto.AccountBalanceDto;
 import nttd.bootcamp.microservices.transaction.management.transactionmanagement.dto.AccountDto;
@@ -9,10 +9,10 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 @Service
-public class AccountService {
+public class AccountRepository {
     private final WebClient webClient;
 
-    public AccountService(WebClient.Builder webClientBuilder) {
+    public AccountRepository(WebClient.Builder webClientBuilder) {
         this.webClient = webClientBuilder.baseUrl("http://localhost:8086")
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE).build();
     }

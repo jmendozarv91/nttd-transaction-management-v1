@@ -4,6 +4,7 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 @Getter
 @Setter
@@ -14,7 +15,8 @@ public class TransactionDto {
     private String id;
     private String transactionId;
     private String accountId;
+    private String creditId;
     private String type;
-    private String amount;
-    private Date transactionDate;
+    private Double amount;
+    private LocalDateTime transactionDate;
 }

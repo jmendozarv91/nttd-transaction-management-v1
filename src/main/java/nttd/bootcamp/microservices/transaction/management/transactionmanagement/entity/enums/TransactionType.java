@@ -2,7 +2,9 @@ package nttd.bootcamp.microservices.transaction.management.transactionmanagement
 
 public enum TransactionType {
     DEPOSIT("01","deposit"),
-    WITHDRAWAL("02","withdrawal");
+    WITHDRAWAL("02","withdrawal"),
+
+    PAYMENT("03","payment");
 
     private final String code;
     private final String name;
